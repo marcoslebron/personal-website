@@ -1,75 +1,50 @@
-# Nuxt Content Starter
+# Marcos Lebron - Personal Portfolio & Blog
 
-Look at the [Nuxt Content documentation](https://content.nuxt.com) to learn more.
+This is the repository for my personal portfolio, engineering blog, and case studies, built using a modern decoupled frontend stack. The platform serves as a central hub for my technical writing and a showcase for scalable architecture.
 
-## Setup
+## 🚀 Tech Stack
 
-Make sure to install dependencies:
+- **Framework:** [Nuxt](https://nuxt.com/) (Vue 3, SSR, API Routes)
+- **Content Management:** [Nuxt Content](https://content.nuxt.com/) (Markdown-based, Zod schemas)
+- **Styling:** Vanilla CSS / Modern UI Patterns
+- **Deployment:** Vercel / AWS (configurable)
 
-```bash
-# npm
-npm install
+## 🏗️ Project Structure
 
-# pnpm
-pnpm install
+- `/app/pages`: Application routing (Home, Projects, Case Studies, Writing, About)
+- `/content`: Markdown-based content split into `projects/`, `case-studies/`, `writing/`, and `blog/`
+- `/content.config.ts`: Nuxt Content v3 configurations and custom Zod schemas for structured frontmatter
+- `design_guide.md`: Core system architecture and UI aesthetics
 
-# yarn
-yarn install
+## 💻 Local Development
 
-# bun
-bun install
-```
+1. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   bun install
+   ```
 
-## Development Server
+2. **Start the development server:**
+   ```bash
+   npm run dev
+   # or
+   bun run dev
+   ```
 
-Start the development server on `http://localhost:3000`:
+3. **Open the application:**
+   Visit `http://localhost:3000` in your browser.
 
-```bash
-# npm
-npm run dev
+## 📦 Production Build
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
+To build the project for production:
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
+# Or to preview locally:
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 📝 License
+
+Designed and developed by Marcos Lebron. All content and case studies are proprietary. Code structure is available for educational reference.

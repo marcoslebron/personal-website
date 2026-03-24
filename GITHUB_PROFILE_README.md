@@ -18,27 +18,26 @@ I build scalable web platforms, developer-facing systems, and high-performance p
   <img src="https://skillicons.dev/icons?i=ts,react,nextjs,vue,nuxtjs,nodejs,postgres,aws,docker,tailwind,git&perline=11" />
 </div>
 
-<br />
 
-## 📊 GitHub Stats
+<!-- ## 📊 GitHub Stats
 
 <div align="flex-start">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" height="150" alt="GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_GITHUB_USERNAME&theme=radical&hide_border=true&background=0D1117" height="150" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api?username=marcoslebron&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" height="150" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=marcoslebron&theme=radical&hide_border=true&background=0D1117" height="150" alt="GitHub Streak" />
 </div>
 
-<br />
+<br /> -->
 
 ## 🌐 Connect With Me
 
 <div align="flex-start">
-  <a href="mailto:contact@example.com">
+  <a href="mailto:lebron.marcos@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN">
+  <a href="https://linkedin.com/in/marcos-lebron">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="https://your-portfolio-url.com">
+  <a href="https://marcoslebron.com">
     <img src="https://img.shields.io/badge/Portfolio-10B981?style=for-the-badge&logo=CodeIgniter&logoColor=white" alt="Portfolio" />
   </a>
 </div>
