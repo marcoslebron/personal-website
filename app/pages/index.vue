@@ -10,6 +10,7 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
     <section class="hero">
       <div class="hero-bg-grid"></div>
       <div class="hero-glow"></div>
+      <div class="dot-overlay"></div>
       
       <div class="hero-container">
         <!-- Left: Text content -->
@@ -76,23 +77,14 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
 
     <!-- FEATURED WORK -->
     <section class="featured-work">
+      <div class="dot-overlay"></div>
       <div class="section-header">
         <h2 class="section-title">Featured Work</h2>
         <p class="section-subtext">Selected projects and case-study style builds that reflect how I think about architecture, product delivery, and scalable systems.</p>
       </div>
       
       <div class="projects-grid">
-        <article class="project-card" v-for="project in projects" :key="project.path">
-          <div class="card-label">Project</div>
-          <h3 class="project-title">{{ project.title }}</h3>
-          <p class="project-desc">{{ project.description }}</p>
-          <div class="tech-tags" v-if="project.stack">
-            <span v-for="tech in project.stack" :key="tech">{{ tech }}</span>
-          </div>
-          <div class="project-footer">
-            <NuxtLink :to="project.path" class="view-project-link">View Project <span class="arrow">→</span></NuxtLink>
-          </div>
-        </article>
+        <ProjectCard v-for="project in projects" :key="project.path" :project="project" />
       </div>
     </section>
 
@@ -133,16 +125,7 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
       </div>
       
       <div class="case-studies-grid">
-        <article class="case-card" v-for="study in caseStudies" :key="study.path">
-          <div class="case-content">
-            <h3 class="case-title">{{ study.title }}</h3>
-            <p class="case-desc">{{ study.description }}</p>
-            <ul class="case-bullets" v-if="study.bullets">
-              <li v-for="bullet in study.bullets" :key="bullet">{{ bullet }}</li>
-            </ul>
-          </div>
-          <NuxtLink :to="study.path" class="read-article">Read article <span class="arrow">→</span></NuxtLink>
-        </article>
+        <CaseStudyCard v-for="study in caseStudies" :key="study.path" :study="study" />
       </div>
     </section>
 
@@ -176,28 +159,11 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
       </div>
       
       <div class="writing-list">
-        <NuxtLink v-for="post in writing" :key="post.path" :to="post.path" class="writing-card">
-          <h3>{{ post.title }}</h3>
-          <span class="writing-arrow">→</span>
-        </NuxtLink>
+        <WritingCard v-for="post in writing" :key="post.path" :post="post" />
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-left">
-          <div class="footer-name">Marcos Lebron</div>
-          <div class="footer-role">Senior Frontend / Full Stack Engineer</div>
-          <div class="footer-copy">© 2026 Marcos Lebron</div>
-        </div>
-        <div class="footer-right">
-          <a href="https://github.com" target="_blank">GitHub</a>
-          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-          <a href="mailto:contact@example.com">Email</a>
-        </div>
-      </div>
-    </footer>
+
   </div>
 </template>
 
@@ -268,6 +234,23 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
   background: radial-gradient(circle, var(--glow-soft) 0%, transparent 70%);
   filter: blur(80px);
   z-index: -1;
+  pointer-events: none;
+}
+
+.dot-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--accent-primary) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--border-line) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px;
+  background-position: center;
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  opacity: 0.1;
+  z-index: -3;
   pointer-events: none;
 }
 
@@ -493,6 +476,7 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
 /* FEATURED WORK */
 .featured-work {
   padding: 2.5rem 0;
+  position: relative;
 }
 
 .projects-grid {

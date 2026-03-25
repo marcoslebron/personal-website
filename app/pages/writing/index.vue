@@ -6,13 +6,7 @@
     </div>
     
     <div class="writing-list">
-      <NuxtLink v-for="post in posts" :key="post.path" :to="post.path" class="writing-card">
-        <div class="writing-info">
-          <h3 class="writing-title">{{ post.title }}</h3>
-          <p class="writing-desc">{{ post.description }}</p>
-        </div>
-        <span class="writing-arrow">→</span>
-      </NuxtLink>
+      <WritingCard v-for="post in posts" :key="post.path" :post="post" />
       <div v-if="!posts || posts.length === 0" class="empty-state">
         <p>No posts found. Add markdown files to <code>/content/writing/</code>.</p>
       </div>
@@ -53,58 +47,6 @@ const { data: posts } = await useAsyncData('writing', () => queryCollection('wri
   gap: 1.5rem;
 }
 
-.writing-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-line);
-  padding: 1.5rem 2rem;
-  border-radius: 16px;
-  text-decoration: none;
-  transition: all 180ms ease;
-}
-
-.writing-card:hover {
-  background: rgba(255, 255, 255, 0.02);
-  border-color: rgba(14, 165, 233, 0.4);
-  transform: translateY(-2px);
-}
-
-.writing-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.writing-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  margin: 0;
-  transition: color 0.2s ease;
-}
-
-.writing-card:hover .writing-title {
-  color: var(--accent-primary);
-}
-
-.writing-desc {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.writing-arrow {
-  font-size: 1.5rem;
-  color: var(--text-secondary);
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.writing-card:hover .writing-arrow {
-  color: var(--accent-primary);
-  transform: translateX(4px);
-}
 
 .empty-state {
   color: var(--text-secondary);

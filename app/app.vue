@@ -5,6 +5,7 @@
     <main class="main-content">
       <NuxtPage />
     </main>
+    <SiteFooter />
   </div>
 </template>
 

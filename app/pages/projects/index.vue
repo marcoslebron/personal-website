@@ -6,13 +6,7 @@
     </div>
     
     <div class="projects-grid">
-      <article v-for="project in projects" :key="project.path" class="project-card">
-        <h3 class="project-title">{{ project.title }}</h3>
-        <p class="project-desc">{{ project.description }}</p>
-        <div class="project-footer">
-          <NuxtLink :to="project.path" class="view-project-link">View Details <span class="arrow">→</span></NuxtLink>
-        </div>
-      </article>
+      <ProjectCard v-for="project in projects" :key="project.path" :project="project" />
       <div v-if="!projects || projects.length === 0" class="empty-state">
         <p>No projects found. Add markdown files to <code>/content/projects/</code>.</p>
       </div>
@@ -53,63 +47,6 @@ const { data: projects } = await useAsyncData('projects', () => queryCollection(
   gap: 24px;
 }
 
-.project-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-line);
-  border-radius: 20px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px var(--glow-soft);
-  border-color: rgba(14, 165, 233, 0.4);
-}
-
-.project-title {
-  font-size: 1.35rem;
-  color: var(--text-primary);
-  margin-bottom: 0.75rem;
-}
-
-.project-desc {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  flex-grow: 1;
-  margin-bottom: 1.5rem;
-}
-
-.project-footer {
-  border-top: 1px solid var(--border-line);
-  padding-top: 1rem;
-}
-
-.view-project-link {
-  color: var(--text-primary);
-  text-decoration: none;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.2s ease;
-}
-
-.view-project-link .arrow {
-  color: var(--accent-primary);
-  transition: transform 0.2s ease;
-}
-
-.project-card:hover .view-project-link {
-  color: var(--accent-primary);
-}
-
-.project-card:hover .arrow {
-  transform: translateX(4px);
-}
 
 .empty-state {
   color: var(--text-secondary);
