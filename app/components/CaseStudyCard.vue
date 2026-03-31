@@ -38,6 +38,19 @@ defineProps<{
 .case-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 20px var(--glow-soft);
+  border-color: transparent;
+  background-image: 
+    linear-gradient(var(--bg-secondary), var(--bg-secondary)), 
+    linear-gradient(90deg, var(--accent-primary), rgba(14, 165, 233, 0.1), var(--accent-primary));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 200% 100%;
+  animation: shimmerBorder 2.5s linear infinite;
+}
+
+@keyframes shimmerBorder {
+  from { background-position: 0% 0%, 200% 0%; }
+  to { background-position: 0% 0%, 0% 0%; }
 }
 
 .case-title {

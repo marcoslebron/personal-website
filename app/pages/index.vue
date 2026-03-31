@@ -18,13 +18,13 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
           <div class="hero-header">
             <h1 class="hero-title">
               <span class="name">Marcos Lebron</span>
-              <span class="role">Senior Frontend / Full Stack Engineer</span>
+              <span class="role">Senior Full-Stack Engineer building scalable SaaS and AI-enabled products</span>
             </h1>
             <p class="hero-subheadline">
-              I build scalable web platforms, developer-facing systems, and high-performance product experiences with React, TypeScript, Node.js, and AWS.
+              I design and ship production-grade software systems across frontend, backend, and cloud infrastructure — with a focus on architecture, maintainability, intelligent workflows, and real business impact.
             </p>
             <p class="hero-support-text">
-              Focused on architecture, performance, maintainability, and AI-assisted engineering workflows.
+              From product experiences and internal platforms to APIs, automation, and AI-powered features, I build systems that are meant to scale in production.
             </p>
           </div>
           
@@ -43,10 +43,10 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
         <!-- Right: Profile Card -->
         <div class="hero-card-wrapper">
           <div class="profile-card">
-            <div class="card-badge">Available for senior full-stack / frontend roles</div>
+            <div class="card-badge">AVAILABLE FOR SENIOR FULL-STACK / PLATFORM ROLES</div>
             
             <div class="card-section">
-              <h3 class="card-section-title">Core Stack</h3>
+              <h3 class="card-section-title">CORE STACK</h3>
               <div class="badge-list">
                 <span class="tech-badge">React</span>
                 <span class="tech-badge">TypeScript</span>
@@ -57,18 +57,18 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
             </div>
             
             <div class="card-section">
-              <h3 class="card-section-title">Focus Areas</h3>
+              <h3 class="card-section-title">ENGINEERING FOCUS</h3>
               <ul class="focus-list">
-                <li>Scalable frontend architecture</li>
-                <li>Multi-tenant SaaS</li>
-                <li>Performance optimization</li>
-                <li>AI-assisted development</li>
+                <li>Scalable SaaS platforms and product systems</li>
+                <li>Full-stack architecture across UI, APIs, and cloud</li>
+                <li>AI-powered workflows and intelligent automation</li>
+                <li>Performance, maintainability, and production readiness</li>
               </ul>
             </div>
             
             <div class="card-footer">
               <span class="footer-dot"></span>
-              Built for production, not demos.
+              Built for real products, complex workflows, and scale.
             </div>
           </div>
         </div>
@@ -280,7 +280,7 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
-  color: var(--accent-primary);
+  color: var(--text-secondary);
   margin-top: 0.25rem;
 }
 
@@ -397,6 +397,24 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
   padding: 28px;
   box-shadow: 0 10px 30px var(--glow-soft);
   transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px var(--glow-soft);
+  border-color: transparent;
+  background-image: 
+    linear-gradient(var(--bg-secondary), var(--bg-secondary)), 
+    linear-gradient(90deg, var(--accent-primary), rgba(14, 165, 233, 0.1), var(--accent-primary));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 200% 100%;
+  animation: shimmerBorder 2.5s linear infinite;
+}
+
+@keyframes shimmerBorder {
+  from { background-position: 0% 0%, 200% 0%; }
+  to { background-position: 0% 0%, 0% 0%; }
 }
 
 .card-badge {
@@ -857,8 +875,11 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
   .hero-container {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
     gap: 3rem;
+  }
+  .hero-card-wrapper { 
+    margin-right: 30px;
   }
 }
 

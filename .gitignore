@@ -24,3 +24,9 @@ logs
 !.env.example
 
 pnpm-lock.yaml
+# Test coverage
+coverage/
+
+# Playwright
+playwright-report/
+test-results/
