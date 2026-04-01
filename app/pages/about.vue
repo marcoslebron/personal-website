@@ -21,7 +21,7 @@
       <div class="about-sidebar">
         <h3>Contact</h3>
         <p>Currently open for new opportunities.</p>
-        <a href="mailto:contact@example.com" class="contact-link">Get in touch →</a>
+        <a href="mailto:lebron.marcos@gmail.com" class="contact-link">Get in touch →</a>
       </div>
     </div>
   </div>

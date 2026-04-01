@@ -25,7 +25,7 @@ defineProps<{
 
 <style scoped>
 .project-card {
-  background: #121A2B;
+  background: var(--card-bg-solid);
   border: 1px solid var(--border-line);
   border-radius: 20px;
   padding: 24px;
@@ -39,7 +39,7 @@ defineProps<{
   box-shadow: 0 10px 20px var(--glow-soft);
   border-color: transparent;
   background-image: 
-    linear-gradient(#121A2B, #121A2B), 
+    linear-gradient(var(--card-bg-solid), var(--card-bg-solid)), 
     linear-gradient(90deg, var(--accent-primary), rgba(14, 165, 233, 0.1), var(--accent-primary));
   background-origin: border-box;
   background-clip: padding-box, border-box;

@@ -26,6 +26,29 @@
   /* Shared Gradients from Navbar */
   --highlight-gradient: linear-gradient(90deg, var(--accent-primary), var(--accent-hover));
   --highlight-gradient-angled: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-hover) 100%);
+
+  /* Component specific */
+  --card-bg-solid: #121A2B;
+  --card-bg-gradient: linear-gradient(180deg, #121A2B 0%, #0E1524 100%);
+  --hover-overlay: rgba(255, 255, 255, 0.03);
+  --hover-overlay-light: rgba(255, 255, 255, 0.02);
+}
+
+html.light, html.light-mode {
+  --bg-principal: #ffffff;
+  --bg-secondary: #f8fafc;
+  --border-line: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --accent-primary: #0284c7;
+  --accent-hover: #0369a1;
+  --tag-bg: #e0f2fe;
+  --glow-soft: rgba(2, 132, 199, 0.18);
+  
+  --card-bg-solid: #ffffff;
+  --card-bg-gradient: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  --hover-overlay: rgba(0, 0, 0, 0.03);
+  --hover-overlay-light: rgba(0, 0, 0, 0.02);
 }
 
 body {

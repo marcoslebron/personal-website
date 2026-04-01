@@ -34,9 +34,9 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
           </div>
           
           <div class="hero-links">
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="mailto:contact@example.com">Email</a>
+            <a href="https://linkly.link/2eu1R" target="_blank">GitHub</a>
+            <a href="https://linkly.link/2eu1V" target="_blank">LinkedIn</a>
+            <a href="mailto:lebron.marcos@gmail.com">Email</a>
           </div>
         </div>
         
@@ -337,7 +337,7 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
 
 .btn-secondary:hover {
   border-color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--hover-overlay);
 }
 
 .hero-links {
@@ -388,10 +388,11 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
 /* PROFILE INTERVIEW CARD */
 .hero-card-wrapper {
   perspective: 1000px;
+  margin-right: 2rem;
 }
 
 .profile-card {
-  background: linear-gradient(180deg, #121A2B 0%, #0E1524 100%);
+  background: var(--card-bg-gradient);
   border: 1px solid var(--border-line);
   border-radius: 24px;
   padding: 28px;
@@ -504,7 +505,7 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
 }
 
 .project-card {
-  background: #121A2B;
+  background: var(--card-bg-solid);
   border: 1px solid var(--border-line);
   border-radius: 20px;
   padding: 24px;
@@ -811,7 +812,7 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
 }
 
 .writing-card:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--hover-overlay-light);
   border-color: rgba(79, 140, 255, 0.3);
 }
 

@@ -7,9 +7,9 @@
         <div class="footer-copy">© 2026 Marcos Lebron</div>
       </div>
       <div class="footer-right">
-        <a href="https://github.com" target="_blank">GitHub</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="mailto:contact@example.com">Email</a>
+        <a href="https://linkly.link/2eu1R" target="_blank">GitHub</a>
+        <a href="https://linkly.link/2eu1V" target="_blank">LinkedIn</a>
+        <a href="mailto:lebron.marcos@gmail.com">Email</a>
       </div>
     </div>
   </footer>

@@ -52,7 +52,7 @@ defineProps<{
   transform: translateY(-2px);
   border-color: transparent;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)), 
+    linear-gradient(var(--hover-overlay-light), var(--hover-overlay-light)), 
     linear-gradient(90deg, var(--accent-primary), rgba(14, 165, 233, 0.1), var(--accent-primary));
   background-origin: border-box;
   background-clip: padding-box, border-box;
