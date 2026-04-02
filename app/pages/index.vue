@@ -48,7 +48,7 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
             <div class="card-section">
               <h3 class="card-section-title">CORE STACK</h3>
               <div class="badge-list">
-                <span class="tech-badge">React</span>
+                <span class="tech-badge">React / Vue</span>
                 <span class="tech-badge">TypeScript</span>
                 <span class="tech-badge">Node.js</span>
                 <span class="tech-badge">AWS</span>
@@ -141,9 +141,9 @@ const { data: writing } = await useAsyncData('home-writing', () => queryCollecti
         <div class="about-stats">
           <ul class="stats-list">
             <li><strong>7+ years</strong> building web applications</li>
-            <li><strong>React / TypeScript / Node.js</strong></li>
-            <li><strong>AWS / scalable platform work</strong></li>
-            <li><strong>Architecture + performance mindset</strong></li>
+            <li><strong>React / Vue / TypeScript / Node.js</strong></li>
+            <li><strong>AWS / Scalable Platform Work</strong></li>
+            <li><strong>Architecture + Performance Mindset</strong></li>
           </ul>
         </div>
       </div>
